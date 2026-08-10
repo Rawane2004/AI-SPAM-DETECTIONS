@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Spam Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="badge">
+        <i class="fa-regular fa-envelope"></i>
+        Machine Learning Classifier
+    </div>
+
+    <h1>
+        <i class="fa-solid fa-envelope-open-text"></i>
+        AI Spam Detector
+    </h1>
+
+    <p class="description">
+        Detect whether an email message is Spam or Not Spam
+        using a Machine Learning model built with Python and
+        Scikit-learn.
+    </p>
+
+    <div class="card">
+
+        <h2>Email Message</h2>
+
+        <textarea
+            id="message"
+            placeholder="Paste or type an email message here..."
+        ></textarea>
+
+        <button onclick="analyzeMessage()">
+            Analyze Message
+        </button>
+
+        <div class="result" id="result">
+
+            <h3 id="prediction"></h3>
+
+            <p id="confidence"></p>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        Powered by
+        <span>Python</span> •
+        <span>Scikit-learn</span> •
+        <span>Flask</span>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
